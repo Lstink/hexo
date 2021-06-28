@@ -1,0 +1,1680 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="php面试">
+    <meta name="description" content="hello,here is lstink&#39;s blog.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166915022-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-166915022-1');
+</script>
+
+
+    <title>面试复习 | Lstink</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Lstink" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lstink</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lstink</div>
+        <div class="logo-desc">
+            
+            hello,here is lstink&#39;s blog.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">面试复习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/php/">
+                                <span class="chip bg-color">php</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/php/" class="post-category">
+                                php
+                            </a>
+                        
+                            <a href="/categories/php/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                面试题
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-06-28
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    3.3k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="git-使用"><a href="#git-使用" class="headerlink" title="git 使用"></a>git 使用</h2><h3 id="初始化git-进入项目所在文件夹"><a href="#初始化git-进入项目所在文件夹" class="headerlink" title="初始化git: 进入项目所在文件夹"></a>初始化git: 进入项目所在文件夹</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> init </code></pre>
+<p>这个命令会产生一个隐藏文件夹： .git </p>
+<p>查看隐藏文件/文件夹</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">ls</span> -a</code></pre>
+<h3 id="git是什么？"><a href="#git是什么？" class="headerlink" title=".git是什么？"></a>.git是什么？</h3><p>​    本地存储的git仓库/本地git仓库</p>
+<h3 id="怎么去提交代码？"><a href="#怎么去提交代码？" class="headerlink" title="怎么去提交代码？"></a>怎么去提交代码？</h3><p>添加所有的文件到缓冲区（.git）</p>
+<pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> add <span class="token keyword">.</span></code></pre>
+<h3 id="怎么去保存代码？"><a href="#怎么去保存代码？" class="headerlink" title="怎么去保存代码？"></a>怎么去保存代码？</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> commit -m <span class="token string">'备注内容'</span></code></pre>
+<p>现在代码已经提交到本地仓库了，但是并没有推送到远程仓库。</p>
+<h3 id="怎么去把代码提交到线上仓库（远程仓库）？"><a href="#怎么去把代码提交到线上仓库（远程仓库）？" class="headerlink" title="怎么去把代码提交到线上仓库（远程仓库）？"></a>怎么去把代码提交到线上仓库（远程仓库）？</h3><h4 id="关联远程仓库（这个步骤是在你没有关联过远程仓库的情况下，如果你的项目是git-clone下来的，那么就不需要你去手动关联）"><a href="#关联远程仓库（这个步骤是在你没有关联过远程仓库的情况下，如果你的项目是git-clone下来的，那么就不需要你去手动关联）" class="headerlink" title="关联远程仓库（这个步骤是在你没有关联过远程仓库的情况下，如果你的项目是git clone下来的，那么就不需要你去手动关联）"></a>关联远程仓库（这个步骤是在你没有关联过远程仓库的情况下，如果你的项目是git clone下来的，那么就不需要你去手动关联）</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> remote add origin https://gitee.com/Lstink/sql_test.git </code></pre>
+<p>提交代码（把本地仓库的代码提交到远程仓库，必须把本地的代码保存到本地仓库）</p>
+<h4 id="第一次提交（远程仓库没有任何代码-仓库的第一次提交）"><a href="#第一次提交（远程仓库没有任何代码-仓库的第一次提交）" class="headerlink" title="第一次提交（远程仓库没有任何代码/仓库的第一次提交）"></a>第一次提交（远程仓库没有任何代码/仓库的第一次提交）</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> push -u origin master</code></pre>
+<h4 id="正常提交，记得每次提交代码之前最好先-git-pull"><a href="#正常提交，记得每次提交代码之前最好先-git-pull" class="headerlink" title="正常提交，记得每次提交代码之前最好先 git pull"></a>正常提交，记得每次提交代码之前最好先 <code>git pull</code></h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> push </code></pre>
+<h3 id="查看当前git修改状态"><a href="#查看当前git修改状态" class="headerlink" title="查看当前git修改状态"></a>查看当前git修改状态</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> status</code></pre>
+<h3 id="查看某个文件和上一次提交修改了哪些内容"><a href="#查看某个文件和上一次提交修改了哪些内容" class="headerlink" title="查看某个文件和上一次提交修改了哪些内容"></a>查看某个文件和上一次提交修改了哪些内容</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> <span class="token function">diff</span> zs.php</code></pre>
+<h2 id="当给你一个git项目地址，你该怎么做？"><a href="#当给你一个git项目地址，你该怎么做？" class="headerlink" title="当给你一个git项目地址，你该怎么做？"></a>当给你一个git项目地址，你该怎么做？</h2><pre class=" language-bash"><code class="language-bash">https://gitee.com/Lstink/take-out.git</code></pre>
+<h3 id="1-克隆下来这个项目"><a href="#1-克隆下来这个项目" class="headerlink" title="1.克隆下来这个项目"></a>1.克隆下来这个项目</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> clone https://gitee.com/Lstink/take-out.git</code></pre>
+<h3 id="2-查看-gitignore文件"><a href="#2-查看-gitignore文件" class="headerlink" title="2.查看.gitignore文件"></a>2.查看<code>.gitignore</code>文件</h3><p>​    确认有哪些必要文件没有上传到远程仓库，手动去配置或者下载这些文件</p>
+<blockquote>
+<p>注意：</p>
+<p>.gitignore 这个文件内所写的内容是排除提交的，就是忽略掉这个文件内写的目录或者文件。</p>
+<p>比如经常写的,这是排除phpstorm编辑器和vscode编辑器自己产生的配置文件</p>
+<p>/.idea</p>
+<p>/.vscode</p>
+</blockquote>
+<h4 id="查看提交日志"><a href="#查看提交日志" class="headerlink" title="查看提交日志"></a>查看提交日志</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> log</code></pre>
+<h4 id="回退到上一次提交的版本"><a href="#回退到上一次提交的版本" class="headerlink" title="回退到上一次提交的版本"></a>回退到上一次提交的版本</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> reset --hard HEAD^ / <span class="token function">git</span> reset --hard HEAD~2</code></pre>
+<h3 id="3-创建分支"><a href="#3-创建分支" class="headerlink" title="3.创建分支"></a>3.创建分支</h3><h4 id="创建test分支"><a href="#创建test分支" class="headerlink" title="创建test分支"></a>创建test分支</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> branch <span class="token function">test</span> </code></pre>
+<h4 id="创建分支并切换到该分支"><a href="#创建分支并切换到该分支" class="headerlink" title="创建分支并切换到该分支"></a>创建分支并切换到该分支</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> checkout -b <span class="token function">test</span></code></pre>
+<h3 id="4-切换分支"><a href="#4-切换分支" class="headerlink" title="4.切换分支"></a>4.切换分支</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> checkout <span class="token function">test</span></code></pre>
+<h3 id="5-合并分支"><a href="#5-合并分支" class="headerlink" title="5.合并分支"></a>5.合并分支</h3><h4 id="合并到哪个分支上就切换到哪个分支上"><a href="#合并到哪个分支上就切换到哪个分支上" class="headerlink" title="合并到哪个分支上就切换到哪个分支上"></a>合并到哪个分支上就切换到哪个分支上</h4><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> checkout master <span class="token operator">&amp;&amp;</span> <span class="token function">git</span> merge <span class="token function">test</span></code></pre>
+<h3 id="6-拉取代码"><a href="#6-拉取代码" class="headerlink" title="6.拉取代码"></a>6.拉取代码</h3><pre class=" language-bash"><code class="language-bash"><span class="token function">git</span> pull</code></pre>
+<h2 id="js-（Jquery-javascript）"><a href="#js-（Jquery-javascript）" class="headerlink" title="js （Jquery/javascript）"></a>js （Jquery/javascript）</h2><h3 id="1-选择器"><a href="#1-选择器" class="headerlink" title="1.选择器"></a>1.选择器</h3><h4 id="‘-class’"><a href="#‘-class’" class="headerlink" title="$(‘.class’)"></a>$(‘.class’)</h4><h3 id="2-事件"><a href="#2-事件" class="headerlink" title="2.事件"></a>2.事件</h3><h3 id="3-DOM操作"><a href="#3-DOM操作" class="headerlink" title="3.DOM操作"></a>3.DOM操作</h3><h3 id="4-ajax同步异步问题"><a href="#4-ajax同步异步问题" class="headerlink" title="4.ajax同步异步问题"></a>4.ajax同步异步问题</h3><h2 id="Vue-Vue-js-前端的一个js框架，微信小程序开发必会，前端框架"><a href="#Vue-Vue-js-前端的一个js框架，微信小程序开发必会，前端框架" class="headerlink" title="Vue (Vue.js)前端的一个js框架，微信小程序开发必会，前端框架"></a>Vue (Vue.js)前端的一个js框架，微信小程序开发必会，前端框架</h2><h2 id="Docker是什么？"><a href="#Docker是什么？" class="headerlink" title="Docker是什么？"></a>Docker是什么？</h2><p>​    docker相当于是一个Linux系统上的虚拟机，分三个内容：</p>
+<ol>
+<li><p>镜像 </p>
+</li>
+<li><p>仓库</p>
+</li>
+<li><p>容器</p>
+<table>
+<thead>
+<tr>
+<th align="center">名称</th>
+<th align="center">解释</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">下载一个镜像</td>
+<td align="center">docekr pull ubuntu:19.04</td>
+</tr>
+<tr>
+<td align="center">远程仓库</td>
+<td align="center">docker login</td>
+</tr>
+<tr>
+<td align="center">容器</td>
+<td align="center">容器里存放镜像</td>
+</tr>
+</tbody></table>
+<h3 id="下载一个镜像-最新"><a href="#下载一个镜像-最新" class="headerlink" title="下载一个镜像(最新)"></a>下载一个镜像(最新)</h3><pre class=" language-bash"><code class="language-bash">docker pull centos</code></pre>
+<h3 id="启动一个容器"><a href="#启动一个容器" class="headerlink" title="启动一个容器"></a>启动一个容器</h3><pre class=" language-bash"><code class="language-bash">docker run -it -d --name zs -p 127.0.0.1:80:80 ubuntu /bin/bash </code></pre>
+<ul>
+<li>–name 声明容器的名称</li>
+<li>-d 后台运行这个容器</li>
+<li>-p 端口映射:容器内部端口绑定到<strong>指定</strong>的主机端口。左边是主机端口，右边是容器端口</li>
+</ul>
+<h3 id="查看容器"><a href="#查看容器" class="headerlink" title="查看容器"></a>查看容器</h3><h4 id="查看正在运行的容器"><a href="#查看正在运行的容器" class="headerlink" title="查看正在运行的容器"></a>查看正在运行的容器</h4><pre class=" language-bash"><code class="language-bash">docker <span class="token function">ps</span> </code></pre>
+<h4 id="查看所有容器"><a href="#查看所有容器" class="headerlink" title="查看所有容器"></a>查看所有容器</h4><pre class=" language-bash"><code class="language-bash">docker <span class="token function">ps</span> -a</code></pre>
+<h3 id="启动一个容器-1"><a href="#启动一个容器-1" class="headerlink" title="启动一个容器"></a>启动一个容器</h3><pre class=" language-bash"><code class="language-bash">docker start dfghfgsgsfgs/zs</code></pre>
+<h3 id="停止一个容器"><a href="#停止一个容器" class="headerlink" title="停止一个容器"></a>停止一个容器</h3><pre class=" language-bash"><code class="language-bash">docker stop dfgdfgsgddd/zs</code></pre>
+<h3 id="重启一个容器"><a href="#重启一个容器" class="headerlink" title="重启一个容器"></a>重启一个容器</h3><pre class=" language-bash"><code class="language-bash">docker restart dghgagdhjf/zs</code></pre>
+<h3 id="进入一个容器"><a href="#进入一个容器" class="headerlink" title="进入一个容器"></a>进入一个容器</h3><pre class=" language-bash"><code class="language-bash">docker <span class="token function">exec</span> -it ghdfssdgfsas/zs /bin/bash</code></pre>
+<h3 id="退出容器"><a href="#退出容器" class="headerlink" title="退出容器"></a>退出容器</h3><pre class=" language-bash"><code class="language-bash"><span class="token keyword">exit</span></code></pre>
+<h3 id="删除一个容器"><a href="#删除一个容器" class="headerlink" title="删除一个容器"></a>删除一个容器</h3><pre class=" language-bash"><code class="language-bash">docker <span class="token function">rm</span> -f dsfdsfsfs/zs</code></pre>
+<h3 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h3><pre class=" language-bash"><code class="language-bash">docker images</code></pre>
+<h3 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h3><pre class=" language-bash"><code class="language-bash">docker rmi ubuntu</code></pre>
+<h3 id="容器互联"><a href="#容器互联" class="headerlink" title="容器互联"></a>容器互联</h3><h4 id="创建docker网络"><a href="#创建docker网络" class="headerlink" title="创建docker网络"></a>创建docker网络</h4><pre class=" language-bash"><code class="language-bash">docker network create -d bridge test-net</code></pre>
+<p><a href="https://www.runoob.com/docker/docker-container-connection.html" target="_blank" rel="noopener">菜鸟教程</a></p>
+</li>
+</ol>
+<h2 id="Swoole"><a href="#Swoole" class="headerlink" title="Swoole"></a>Swoole</h2><h3 id="swoole是什么？"><a href="#swoole是什么？" class="headerlink" title="swoole是什么？"></a><a href="http://wiki.swoole.com/" target="_blank" rel="noopener">swoole</a>是什么？</h3><p>也是一个框架，可以用来做多进程，websocket长连接</p>
+<h2 id="Mysql问题"><a href="#Mysql问题" class="headerlink" title="Mysql问题"></a>Mysql问题</h2><h3 id="主从复制-2个以上"><a href="#主从复制-2个以上" class="headerlink" title="主从复制 2个以上"></a>主从复制 2个以上</h3><ol>
+<li><p>原理</p>
+{% asset_img 2636642-3c9ab857ff759feb.png 原理图 %}
+
+<ul>
+<li>主库的更新操作都会记录二进制日志（binary log）</li>
+<li>从库开启IO线程，读取主库的二进制日志；写入从库的中继日志(relay log)；</li>
+<li>从库开启SQL线程，将中继日志内容写入从库数据库，实现与主库的一致；</li>
+</ul>
+</li>
+<li><p>配置实现</p>
+<ul>
+<li>修改两个数据库的配置文件 my.cnf</li>
+<li>添加server-id=1，server-id=2 ，server-id不能相同</li>
+<li>主库配置一个账号专门让从库通过这个账号读取数据，进行同步</li>
+</ul>
+</li>
+<li><p>主从同步延时问题怎么产生的？</p>
+<ul>
+<li>主库写二进制日志的时候，它是多进程写的</li>
+<li>从库同步主库内容的时候，它是单进程写的</li>
+</ul>
+</li>
+<li><p>为什么从库不能多进程去写？</p>
+</li>
+<li><p>怎么解决主从延时问题？</p>
+<ul>
+<li>msyql中间件</li>
+</ul>
+</li>
+</ol>
+<h3 id="配置主从复制的目的是什么？"><a href="#配置主从复制的目的是什么？" class="headerlink" title="配置主从复制的目的是什么？"></a>配置主从复制的目的是什么？</h3><ol>
+<li>保留一份备份</li>
+<li>配置读写分离<ul>
+<li>主库进行更新操作</li>
+<li>从库进行查询操作</li>
+</ul>
+</li>
+</ol>
+<h3 id="分区分表"><a href="#分区分表" class="headerlink" title="分区分表"></a>分区分表</h3><ul>
+<li><p>分表</p>
+<p>取余  余数是几就存入第几张表</p>
+<p>hash 哈希  取哈希值的第一位,0123456789abcdef 分16张表。</p>
+</li>
+</ul>
+<h2 id="项目内容"><a href="#项目内容" class="headerlink" title="项目内容"></a>项目内容</h2><h3 id="购物车模块"><a href="#购物车模块" class="headerlink" title="购物车模块"></a>购物车模块</h3><ol>
+<li>登录状态下<ul>
+<li>直接加入购物车</li>
+</ul>
+</li>
+<li>未登录状态下存cookie<ul>
+<li>cookie中存的是json格式的数据</li>
+<li>用base64_encode加密</li>
+<li>存商品id,加入时间，商品的数量</li>
+</ul>
+</li>
+<li>登录时同步cookie内容到购物车<ul>
+<li>判断数据库中是否存在该商品，如果存在则把cookie中商品数量加上数据库中商品的数量</li>
+<li>不存在则直接存入数据库</li>
+</ul>
+</li>
+</ol>
+<h3 id="商城秒杀的实现？"><a href="#商城秒杀的实现？" class="headerlink" title="商城秒杀的实现？"></a>商城秒杀的实现？</h3><p>答:抢购、秒杀是如今很常见的一个应用场景，主要需要解决的问题有两个：<br>1 高并发对数据库产生的压力<br>2 竞争状态下如何解决库存的正确减少（”超卖”问题）<br>对于第一个问题，已经很容易想到用缓存来处理抢购，避免直接操作数据库，例如使用Redis。第二个问题，我们可以使用redis队列来完成，把要秒杀的商品放入到队列中，因为pop操作是原子的，即使有很多用户同时到达，也是依次执行，文件锁和事务在高并发下性能下降很快，当然还要考虑其他方面的东西，比如抢购页面做成静态的，通过ajax调用接口，其中也可能会出现一个用户抢多次的情况，这时候需要再加上一个排队队列和抢购结果队列及库存队列。高并发情况下，将用户进入排队队列，用一个线程循环处理从排队队列取出一个用户，判断用户是否已在抢购结果队列，如果在，则已抢购，否则未抢购，库存减1，写数据库，将用户入结果队列。</p>
+<h2 id="接口开发"><a href="#接口开发" class="headerlink" title="接口开发"></a>接口开发</h2><h3 id="接口验签"><a href="#接口验签" class="headerlink" title="接口验签"></a>接口验签</h3><ul>
+<li>随机数</li>
+<li>时间戳</li>
+<li>key值</li>
+</ul>
+<h3 id="生成签名"><a href="#生成签名" class="headerlink" title="生成签名"></a>生成签名</h3><pre class=" language-php"><code class="language-php"><span class="token variable">$key</span> <span class="token operator">=</span> <span class="token string">'dsdfsfgs'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//双方约定的key值</span>
+<span class="token variable">$tmpArr</span> <span class="token operator">=</span> <span class="token keyword">array</span><span class="token punctuation">(</span><span class="token variable">$key</span><span class="token punctuation">,</span> <span class="token variable">$timestamp</span><span class="token punctuation">,</span> <span class="token variable">$nonce</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将key,时间戳，随机数放到一个数组中</span>
+<span class="token function">sort</span><span class="token punctuation">(</span><span class="token variable">$tmpArr</span><span class="token punctuation">,</span> <span class="token constant">SORT_STRING</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//对这个数组进行字典排序</span>
+<span class="token variable">$tmpStr</span> <span class="token operator">=</span> <span class="token function">implode</span><span class="token punctuation">(</span> <span class="token variable">$tmpArr</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将数组拼接成字符串</span>
+<span class="token variable">$signature</span> <span class="token operator">=</span> <span class="token function">sha1</span><span class="token punctuation">(</span> <span class="token variable">$tmpStr</span> <span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//sha1进行加密，加密结果就是signature</span></code></pre>
+<h3 id="验证签名"><a href="#验证签名" class="headerlink" title="验证签名"></a>验证签名</h3><p>客户端发送过来的数据必须通过同样的方式生成签名，并且把 <strong><em>随机数</em></strong> ，<strong><em>时间戳</em></strong> 和 <strong><em>signature</em></strong> 发送过来，同时携带上请求的数据，我们按照同样的方式生成签名，对比签名是否一致。</p>
+<h3 id="接口加密"><a href="#接口加密" class="headerlink" title="接口加密"></a>接口加密</h3><p>将请求的数据和 <strong><em>随机数</em></strong> ， <strong><em>时间戳</em></strong> 进行某种方式的加密，得到密文，把密文和 <strong><em>signature</em></strong> 发送给请求的接口，这时候，接口进行解密，得到数据，生成签名，对比签名是否一致。</p>
+<h3 id="restful风格的接口"><a href="#restful风格的接口" class="headerlink" title="restful风格的接口"></a>restful风格的接口</h3><p>laravel中又叫资源路由 (resource)</p>
+<table>
+<thead>
+<tr>
+<th>请求的方法</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>get</td>
+<td>获取数据</td>
+</tr>
+<tr>
+<td>post</td>
+<td>添加数据</td>
+</tr>
+<tr>
+<td>put</td>
+<td>修改数据（修改数据的全部信息）</td>
+</tr>
+<tr>
+<td>patch</td>
+<td>修改数据（修改数据的某几个字段）</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>删除数据</td>
+</tr>
+<tr>
+<td>head</td>
+<td>获取资源的元数据(不常用)</td>
+</tr>
+<tr>
+<td>options</td>
+<td>获取信息，关于资源的哪些属性是客户端可以改变的。（不常用）</td>
+</tr>
+</tbody></table>
+<h2 id="Redis的使用"><a href="#Redis的使用" class="headerlink" title="Redis的使用"></a>Redis的使用</h2><h3 id="redis的数据类型"><a href="#redis的数据类型" class="headerlink" title="redis的数据类型"></a>redis的数据类型</h3><ol>
+<li>字符串</li>
+<li>hash</li>
+<li>集合：集合的数据是唯一的，不能出现重复的数据</li>
+<li>有序集合: 有序集合的成员是唯一的,但分数(score)却可以重复,可以进行排名或者比较大小</li>
+<li>队列</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>存</th>
+<th>取</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>字符串</td>
+<td>SET key</td>
+<td>GET key</td>
+</tr>
+<tr>
+<td>HASH</td>
+<td>HSET key field value (HMSET key field value field value …)</td>
+<td>HGET key filed (HGETALL key)</td>
+</tr>
+<tr>
+<td>集合</td>
+<td>SADD key member1 member2(成员)…</td>
+<td>SMEMBERS key</td>
+</tr>
+<tr>
+<td>有序集合</td>
+<td>ZADD key score1 member1 score2 member2 …</td>
+<td>ZRANGE key 0 -1（获取这个key的所有值）</td>
+</tr>
+<tr>
+<td>队列</td>
+<td>LPUSH key value / RPUSH key value</td>
+<td>LPOP key / RPOP key</td>
+</tr>
+</tbody></table>
+<h2 id="数据库优化"><a href="#数据库优化" class="headerlink" title="数据库优化"></a>数据库优化</h2><ol>
+<li>数据表设计上，合理使用字段类型</li>
+<li>经常查询的字段建立合适的索引</li>
+<li>查询语句尽量简短，需要什么字段查询什么字段，避免使用select *</li>
+<li>尽量少在sql语句中使用除聚合函数外的其它函数，能用php处理的就在php上处理</li>
+<li>查询语句尽量用到覆盖索引</li>
+<li>mysql读写分离，主从复制，分区分表</li>
+<li>数据库的字段如果没有值，不要自动填充NULL</li>
+<li>避免使用 %前缀的模糊查询 </li>
+</ol>
+<h3 id="词语解释"><a href="#词语解释" class="headerlink" title="词语解释"></a>词语解释</h3><ul>
+<li><p>char和varchar的区别：</p>
+<p>char是固定长度，varchar可变长度，速度上char比varchar更快</p>
+</li>
+<li><p>索引的类型有哪些？</p>
+<ol>
+<li><p>普通索引：加快查询速度</p>
+</li>
+<li><p>唯一索引：加快查询速度，并且值唯一，不能重复</p>
+</li>
+<li><p>主键索引：该索引在一张表中只能有一个，并且值不能重复</p>
+</li>
+<li><p>复合索引：多个字段共同建立的索引</p>
+<p>复合索引的最左原则?</p>
+<p>a b c    a=1 and b=2 and c=4</p>
+<p>数据库的所有查询语句都会被mysql的查询优化器先处理， b a c =&gt; a b c </p>
+</li>
+</ol>
+</li>
+<li><p>聚合函数是什么？</p>
+<p>count() 求数量</p>
+<p>avg()</p>
+<p>max()</p>
+<p>min()</p>
+<p>sum()</p>
+<p>使用聚合函数查询速度很快，基本上不会占用很多资源</p>
+</li>
+<li><p>覆盖索引？</p>
+<p>覆盖索引就是你查询的数据在索引中就能直接找到，覆盖索引不是索引，只是一种叫法。</p>
+</li>
+</ul>
+<h3 id="什么是分区？"><a href="#什么是分区？" class="headerlink" title="什么是分区？"></a>什么是分区？</h3><p>分区和分表相似，都是按照规则分解表。不同在于分表将大表分解为若干个独立的实体表，而分区是将数据分段划分在多个位置存放，分区后，表还是一张表，但数据散列到多个位置了。app读写的时候操作的还是表名字，db自动去组织分区的数据。</p>
+<h3 id="什么是分表？"><a href="#什么是分表？" class="headerlink" title="什么是分表？"></a>什么是分表？</h3><p>分表是将一个大表按照一定的规则分解成多张具有独立存储空间的实体表，每个表都对应三个文件，MYD数据文件，.MYI索引文件，.frm表结构文件。这些表可以分布在同一块磁盘上，也可以在不同的机器上。app读写的时候根据事先定义好的规则得到对应的表名，然后去操作它。</p>
+<p>将单个数据库表进行拆分，拆分成多个数据表，然后用户访问的时候，根据一定的算法（如用hash的方式，也可以用求余（取模）的方式），让用户访问不同的表，这样数据分散到多个数据表中，减少了单个数据表的访问压力。提升了数据库访问性能。分表的目的就在于此，减小数据库的负担，缩短查询时间。</p>
+<h2 id="Linux"><a href="#Linux" class="headerlink" title="Linux"></a>Linux</h2><h3 id="linux是什么？"><a href="#linux是什么？" class="headerlink" title="linux是什么？"></a>linux是什么？</h3><p>linux是一个系统。</p>
+<p>系统有很多，比如家庭常用的windows系统，windows系统又分为很多个版本，有windows7 8 10 .</p>
+<p>同样的，linux也是。</p>
+<h3 id="linux有哪些常用版本？"><a href="#linux有哪些常用版本？" class="headerlink" title="linux有哪些常用版本？"></a>linux有哪些常用版本？</h3><p>centos ubuntu debian …</p>
+<p>centos稳定，但是内核更新慢，软件更新慢，包管理工具 yum </p>
+<p>ubuntu更大众，软件更新快。包管理工具 apt/apt-get</p>
+<p>debian更稳定。包管理工具 apt/apt-get</p>
+<p>安装 <code>git yum install -y git</code></p>
+<p>安装 <code>wget yum install -y wget</code></p>
+<h3 id="你在linux中常用的命令是哪些？"><a href="#你在linux中常用的命令是哪些？" class="headerlink" title="你在linux中常用的命令是哪些？"></a>你在linux中常用的命令是哪些？</h3><p>ls cat cd mv cp touch vi vim chmod chown </p>
+<p>查看端口 <code>netstat -tlunp</code></p>
+<p>查询进程 <code>ps -ef</code>  或者 <code>ps aux</code></p>
+<p>查看内存 <code>free -m</code></p>
+<p>查看cpu运行 <code>top</code></p>
+<h3 id="Linux的权限问题？"><a href="#Linux的权限问题？" class="headerlink" title="Linux的权限问题？"></a>Linux的权限问题？</h3><p>drwxr-xr-x 是什么意思？</p>
+<p><code>d rwx r-x r-x</code>  755</p>
+<p>d 或者 - </p>
+<p>d指的是dir，目录</p>
+<p>-指的是文件 </p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>解释</th>
+<th>权限</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>w</td>
+<td>(read)读</td>
+<td>4</td>
+</tr>
+<tr>
+<td>w</td>
+<td>(write)写</td>
+<td>2</td>
+</tr>
+<tr>
+<td>x</td>
+<td>(exec)执行</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>第一组指的是文件所有者的权限</p>
+<p>第二组指的是所有者用户所属组的权限</p>
+<p>第三组指的是其它用户的权限</p>
+<h2 id="php优化"><a href="#php优化" class="headerlink" title="php优化"></a>php优化</h2><p>1、将类的方法定义为static。<br>2、尽量使用单引号。<br>3、修改php－fpm进程数。<br>4、修改单个脚本最大可使用内存。<br>5、大的数组使用完之后要及时释放。<br>6、循环的时候，制定最大循环次数<br>7、不使用@屏蔽错误<br>8、尽量采用大量的 PHP 内置函数<br>9、使用require代替require_once</p>
+<h2 id="nginx优化"><a href="#nginx优化" class="headerlink" title="nginx优化"></a>nginx优化</h2><p>1、修改nginx的子进程数。 ［ 最多65535，不是越多越好 ］<br>2、开启静态缓存<br>3、修改主进程数。建议按照cpu 数目来指定，一般为它的倍数 (如,2个四核的cpu计为8)<br>4、开启gzip输出   ［ 开启gzip，ob函数就不能用了 ］<br>5、keepalive_timeout 设置连接超时时间</p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.zhangshan.xyz" rel="external nofollow noreferrer">lstink</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.zhangshan.xyz/2021/06/28/mian-shi-ti/">https://blog.zhangshan.xyz/2021/06/28/mian-shi-ti/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://blog.zhangshan.xyz" target="_blank">lstink</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/php/">
+                                    <span class="chip bg-color">php</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '045fI4gG4wex9OTYw703D5Fp-gzGzoHsz',
+        appKey: 'MsR9j3W6Euk4tUEl7Y9NTBwE',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2021/06/28/mian-shi-ti/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="面试复习">
+                        
+                        <span class="card-title">面试复习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            git 使用初始化git: 进入项目所在文件夹git init 
+这个命令会产生一个隐藏文件夹： .git 
+查看隐藏文件/文件夹
+ls -a
+.git是什么？​    本地存储的git仓库/本地git仓库
+怎么去提交代码？添加所有的文件到
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-28
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/php/" class="post-category">
+                                    php
+                                </a>
+                            
+                            <a href="/categories/php/%E9%9D%A2%E8%AF%95%E9%A2%98/" class="post-category">
+                                    面试题
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/php/">
+                        <span class="chip bg-color">php</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2021/04/01/mysql-chu-cun-guo-cheng-he-han-shu/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="mysql储存过程和函数">
+                        
+                        <span class="card-title">mysql储存过程和函数</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Mysql存储过程和函数学习一. 定义名称# 创建存储过程--接受一个整型的输入值
+create procedure name(in param int)
+# 创建函数
+create function name
+二. 输入输出IN , OU
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-01
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            lstink
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://blog.zhangshan.xyz" target="_blank">Lstink</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">23.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Lstink" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1318385889@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1318385889" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1318385889" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?46c241b68612fa4342cdc95d5448203b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "2b3c85e9"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

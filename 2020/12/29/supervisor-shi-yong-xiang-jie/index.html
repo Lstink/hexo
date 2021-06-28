@@ -1,0 +1,1466 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="Supervisor使用详解">
+    <meta name="description" content="hello,here is lstink&#39;s blog.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166915022-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+    gtag('config', 'UA-166915022-1');
+</script>
+
+
+    <title>Supervisor使用详解 | Lstink</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Lstink" type="application/atom+xml">
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Lstink</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Lstink</div>
+        <div class="logo-desc">
+            
+            hello,here is lstink&#39;s blog.
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">Supervisor使用详解</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/linux/">
+                                <span class="chip bg-color">linux</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/linux/" class="post-category">
+                                linux
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-29
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-06-28
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    1.8k
+                </div>
+                
+
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="一、supervisor简介"><a href="#一、supervisor简介" class="headerlink" title="一、supervisor简介"></a>一、supervisor简介</h2><p>Supervisor是用Python开发的一套通用的进程管理程序，能将一个普通的命令行进程变为后台daemon，并监控进程状态，异常退出时能自动重启。它是通过fork/exec的方式把这些被管理的进程当作supervisor的子进程来启动，这样只要在supervisor的配置文件中，把要管理的进程的可执行文件的路径写进去即可。也实现当子进程挂掉的时候，父进程可以准确获取子进程挂掉的信息的，可以选择是否自己启动和报警。supervisor还提供了一个功能，可以为supervisord或者每个子进程，设置一个非root的user，这个user就可以管理它对应的进程。</p>
+<p><em>注：本文以centos7为例，supervisor版本3.4.0。</em></p>
+<h2 id="二、supervisor安装"><a href="#二、supervisor安装" class="headerlink" title="二、supervisor安装"></a>二、supervisor安装</h2><ol>
+<li><p>配置好yum源后，可以直接安装</p>
+<pre class=" language-undefined"><code class="language-undefined">yum install supervisor</code></pre>
+</li>
+<li><p>Debian/Ubuntu可通过apt安装</p>
+<pre class=" language-csharp"><code class="language-csharp">apt<span class="token operator">-</span><span class="token keyword">get</span> install supervisor</code></pre>
+</li>
+<li><p>pip安装</p>
+<pre class=" language-undefined"><code class="language-undefined">pip install supervisor</code></pre>
+</li>
+<li><p>easy_install安装</p>
+<pre class=" language-undefined"><code class="language-undefined">easy_install supervisor</code></pre>
+</li>
+</ol>
+<h2 id="三、supervisor使用"><a href="#三、supervisor使用" class="headerlink" title="三、supervisor使用"></a>三、supervisor使用</h2><h5 id="supervisor配置文件：-etc-supervisord-conf"><a href="#supervisor配置文件：-etc-supervisord-conf" class="headerlink" title="supervisor配置文件：/etc/supervisord.conf"></a>supervisor配置文件：<code>/etc/supervisord.conf</code></h5><p><em>注：supervisor的配置文件默认是不全的，不过在大部分默认的情况下，上面说的基本功能已经满足。</em></p>
+<h5 id="子进程配置文件路径：-etc-supervisord-d"><a href="#子进程配置文件路径：-etc-supervisord-d" class="headerlink" title="子进程配置文件路径：/etc/supervisord.d/"></a>子进程配置文件路径：<code>/etc/supervisord.d/</code></h5><p><em>注：默认子进程配置文件为ini格式，可在supervisor主配置文件中修改。</em></p>
+<h2 id="四、配置文件说明"><a href="#四、配置文件说明" class="headerlink" title="四、配置文件说明"></a>四、配置文件说明</h2><h4 id="supervisor-conf配置文件说明："><a href="#supervisor-conf配置文件说明：" class="headerlink" title="supervisor.conf配置文件说明："></a>supervisor.conf配置文件说明：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token punctuation">[</span>unix_http_server<span class="token punctuation">]</span>
+file<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>supervisor<span class="token punctuation">.</span>sock   <span class="token punctuation">;</span>UNIX socket 文件，supervisorctl 会使用
+<span class="token punctuation">;</span>chmod<span class="token operator">=</span><span class="token number">0700</span>                 <span class="token punctuation">;</span>socket文件的mode，默认是<span class="token number">0700</span>
+<span class="token punctuation">;</span>chown<span class="token operator">=</span>nobody<span class="token operator">:</span>nogroup       <span class="token punctuation">;</span>socket文件的owner，格式：uid<span class="token operator">:</span>gid
+
+<span class="token punctuation">;</span><span class="token punctuation">[</span>inet_http_server<span class="token punctuation">]</span>         <span class="token punctuation">;</span>HTTP服务器，提供web管理界面
+<span class="token punctuation">;</span>port<span class="token operator">=</span><span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token operator">:</span><span class="token number">9001</span>        <span class="token punctuation">;</span>Web管理后台运行的IP和端口，如果开放到公网，需要注意安全性
+<span class="token punctuation">;</span>username<span class="token operator">=</span>user              <span class="token punctuation">;</span>登录管理后台的用户名
+<span class="token punctuation">;</span>password<span class="token operator">=</span><span class="token number">123</span>               <span class="token punctuation">;</span>登录管理后台的密码
+
+<span class="token punctuation">[</span>supervisord<span class="token punctuation">]</span>
+logfile<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>supervisord<span class="token punctuation">.</span>log <span class="token punctuation">;</span>日志文件，默认是 $CWD<span class="token operator">/</span>supervisord<span class="token punctuation">.</span>log
+logfile_maxbytes<span class="token operator">=</span>50MB        <span class="token punctuation">;</span>日志文件大小，超出会rotate，默认 50MB，如果设成<span class="token number">0</span>，表示不限制大小
+logfile_backups<span class="token operator">=</span><span class="token number">10</span>           <span class="token punctuation">;</span>日志文件保留备份数量默认<span class="token number">10</span>，设为<span class="token number">0</span>表示不备份
+loglevel<span class="token operator">=</span>info                <span class="token punctuation">;</span>日志级别，默认info，其它<span class="token operator">:</span> debug<span class="token punctuation">,</span>warn<span class="token punctuation">,</span>trace
+pidfile<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>supervisord<span class="token punctuation">.</span>pid <span class="token punctuation">;</span>pid 文件
+nodaemon<span class="token operator">=</span><span class="token boolean">false</span>               <span class="token punctuation">;</span>是否在前台启动，默认是<span class="token boolean">false</span>，即以 daemon 的方式启动
+minfds<span class="token operator">=</span><span class="token number">1024</span>                  <span class="token punctuation">;</span>可以打开的文件描述符的最小值，默认 <span class="token number">1024</span>
+minprocs<span class="token operator">=</span><span class="token number">200</span>                 <span class="token punctuation">;</span>可以打开的进程数的最小值，默认 <span class="token number">200</span>
+
+<span class="token punctuation">[</span>supervisorctl<span class="token punctuation">]</span>
+serverurl<span class="token operator">=</span>unix<span class="token operator">:</span><span class="token operator">/</span><span class="token comment" spellcheck="true">//tmp/supervisor.sock ;通过UNIX socket连接supervisord，路径与unix_http_server部分的file一致</span>
+<span class="token punctuation">;</span>serverurl<span class="token operator">=</span>http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span><span class="token number">127.0</span><span class="token punctuation">.</span><span class="token number">0.1</span><span class="token operator">:</span><span class="token number">9001</span> <span class="token punctuation">;</span> 通过HTTP的方式连接supervisord
+
+<span class="token punctuation">;</span> <span class="token punctuation">[</span>program<span class="token operator">:</span>xx<span class="token punctuation">]</span>是被管理的进程配置参数，xx是进程的名称
+<span class="token punctuation">[</span>program<span class="token operator">:</span>xx<span class="token punctuation">]</span>
+command<span class="token operator">=</span><span class="token operator">/</span>opt<span class="token operator">/</span>apache<span class="token operator">-</span>tomcat<span class="token number">-8.0</span><span class="token punctuation">.</span><span class="token number">35</span><span class="token operator">/</span>bin<span class="token operator">/</span>catalina<span class="token punctuation">.</span>sh run  <span class="token punctuation">;</span> 程序启动命令
+autostart<span class="token operator">=</span><span class="token boolean">true</span>       <span class="token punctuation">;</span> 在supervisord启动的时候也自动启动
+startsecs<span class="token operator">=</span><span class="token number">10</span>         <span class="token punctuation">;</span> 启动<span class="token number">10</span>秒后没有异常退出，就表示进程正常启动了，默认为<span class="token number">1</span>秒
+autorestart<span class="token operator">=</span><span class="token boolean">true</span>     <span class="token punctuation">;</span> 程序退出后自动重启<span class="token punctuation">,</span>可选值：<span class="token punctuation">[</span>unexpected<span class="token punctuation">,</span><span class="token boolean">true</span><span class="token punctuation">,</span><span class="token boolean">false</span><span class="token punctuation">]</span>，默认为unexpected，表示进程意外杀死后才重启
+startretries<span class="token operator">=</span><span class="token number">3</span>       <span class="token punctuation">;</span> 启动失败自动重试次数，默认是<span class="token number">3</span>
+user<span class="token operator">=</span>tomcat          <span class="token punctuation">;</span> 用哪个用户启动进程，默认是root
+priority<span class="token operator">=</span><span class="token number">999</span>         <span class="token punctuation">;</span> 进程启动优先级，默认<span class="token number">999</span>，值小的优先启动
+redirect_stderr<span class="token operator">=</span><span class="token boolean">true</span> <span class="token punctuation">;</span> 把<span class="token constant">stderr</span>重定向到<span class="token constant">stdout</span>，默认<span class="token boolean">false</span>
+stdout_logfile_maxbytes<span class="token operator">=</span>20MB  <span class="token punctuation">;</span> <span class="token constant">stdout</span> 日志文件大小，默认50MB
+stdout_logfile_backups <span class="token operator">=</span> <span class="token number">20</span>   <span class="token punctuation">;</span> <span class="token constant">stdout</span> 日志文件备份数，默认是<span class="token number">10</span>
+<span class="token punctuation">;</span> <span class="token constant">stdout</span> 日志文件，需要注意当指定目录不存在时无法正常启动，所以需要手动创建目录（supervisord 会自动创建日志文件）
+stdout_logfile<span class="token operator">=</span><span class="token operator">/</span>opt<span class="token operator">/</span>apache<span class="token operator">-</span>tomcat<span class="token number">-8.0</span><span class="token punctuation">.</span><span class="token number">35</span><span class="token operator">/</span>logs<span class="token operator">/</span>catalina<span class="token punctuation">.</span>out
+stopasgroup<span class="token operator">=</span><span class="token boolean">false</span>     <span class="token punctuation">;</span>默认为<span class="token boolean">false</span><span class="token punctuation">,</span>进程被杀死时，是否向这个进程组发送stop信号，包括子进程
+killasgroup<span class="token operator">=</span><span class="token boolean">false</span>     <span class="token punctuation">;</span>默认为<span class="token boolean">false</span>，向进程组发送kill信号，包括子进程
+
+<span class="token punctuation">;</span>包含其它配置文件
+<span class="token punctuation">[</span>include<span class="token punctuation">]</span>
+files <span class="token operator">=</span> relative<span class="token operator">/</span>directory<span class="token operator">/</span><span class="token operator">*</span><span class="token punctuation">.</span>ini    <span class="token punctuation">;</span>可以指定一个或多个以<span class="token punctuation">.</span>ini结束的配置文件</code></pre>
+<h4 id="子进程配置文件说明："><a href="#子进程配置文件说明：" class="headerlink" title="子进程配置文件说明："></a>子进程配置文件说明：</h4><p>给需要管理的子进程(程序)编写一个配置文件，放在<code>/etc/supervisor.d/</code>目录下，以<code>.ini</code>作为扩展名（每个进程的配置文件都可以单独分拆也可以把相关的脚本放一起）。如任意定义一个和脚本相关的项目名称的选项组（/etc/supervisord.d/test.conf）：</p>
+<pre class=" language-ruby"><code class="language-ruby"><span class="token comment" spellcheck="true">#项目名</span>
+<span class="token punctuation">[</span>program<span class="token symbol">:blog</span><span class="token punctuation">]</span>
+<span class="token comment" spellcheck="true">#脚本目录</span>
+directory<span class="token operator">=</span><span class="token operator">/</span>opt<span class="token operator">/</span>bin
+<span class="token comment" spellcheck="true">#脚本执行命令</span>
+command<span class="token operator">=</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>python <span class="token operator">/</span>opt<span class="token operator">/</span>bin<span class="token operator">/</span>test<span class="token punctuation">.</span>py
+
+<span class="token comment" spellcheck="true">#supervisor启动的时候是否随着同时启动，默认True</span>
+autostart<span class="token operator">=</span><span class="token keyword">true</span>
+<span class="token comment" spellcheck="true">#当程序exit的时候，这个program不会自动重启,默认unexpected，设置子进程挂掉后自动重启的情况，有三个选项，false,unexpected和true。如果为false的时候，无论什么情况下，都不会被重新启动，如果为unexpected，只有当进程的退出码不在下面的exitcodes里面定义的</span>
+autorestart<span class="token operator">=</span><span class="token keyword">false</span>
+<span class="token comment" spellcheck="true">#这个选项是子进程启动多少秒之后，此时状态如果是running，则我们认为启动成功了。默认值为1</span>
+startsecs<span class="token operator">=</span><span class="token number">1</span>
+
+<span class="token comment" spellcheck="true">#脚本运行的用户身份 </span>
+user <span class="token operator">=</span> test
+
+<span class="token comment" spellcheck="true">#日志输出 </span>
+stderr_logfile<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>blog_stderr<span class="token punctuation">.</span>log 
+stdout_logfile<span class="token operator">=</span><span class="token operator">/</span>tmp<span class="token operator">/</span>blog_stdout<span class="token punctuation">.</span>log 
+<span class="token comment" spellcheck="true">#把stderr重定向到stdout，默认 false</span>
+redirect_stderr <span class="token operator">=</span> <span class="token keyword">true</span>
+<span class="token comment" spellcheck="true">#stdout日志文件大小，默认 50MB</span>
+stdout_logfile_maxbytes <span class="token operator">=</span> 20MB
+<span class="token comment" spellcheck="true">#stdout日志文件备份数</span>
+stdout_logfile_backups <span class="token operator">=</span> <span class="token number">20</span></code></pre>
+<h5 id="子进程配置示例："><a href="#子进程配置示例：" class="headerlink" title="子进程配置示例："></a>子进程配置示例：</h5><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true">#说明同上</span>
+<span class="token punctuation">[</span>program:test<span class="token punctuation">]</span> 
+directory<span class="token operator">=</span>/opt/bin 
+command<span class="token operator">=</span>/opt/bin/test
+autostart<span class="token operator">=</span>true 
+autorestart<span class="token operator">=</span>false 
+stderr_logfile<span class="token operator">=</span>/tmp/test_stderr.log 
+stdout_logfile<span class="token operator">=</span>/tmp/test_stdout.log 
+<span class="token comment" spellcheck="true">#user = test  </span></code></pre>
+<h2 id="五、supervisor命令说明"><a href="#五、supervisor命令说明" class="headerlink" title="五、supervisor命令说明"></a>五、supervisor命令说明</h2><h5 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h5><pre class=" language-cpp"><code class="language-cpp">supervisorctl status        <span class="token comment" spellcheck="true">//查看所有进程的状态</span>
+supervisorctl stop es       <span class="token comment" spellcheck="true">//停止es</span>
+supervisorctl start es      <span class="token comment" spellcheck="true">//启动es</span>
+supervisorctl restart       <span class="token comment" spellcheck="true">//重启es</span>
+supervisorctl update        <span class="token comment" spellcheck="true">//配置文件修改后使用该命令加载新的配置</span>
+supervisorctl reload        <span class="token comment" spellcheck="true">//重新启动配置中的所有程序</span></code></pre>
+<p>注：把<code>es</code>换成<code>all</code>可以管理配置中的所有进程。直接输入<code>supervisorctl</code>进入supervisorctl的shell交互界面，此时上面的命令不带supervisorctl可直接使用。</p>
+<h5 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h5><p>使用supervisor进程管理命令之前先启动supervisord，否则程序报错。<br> 使用命令<code>supervisord -c /etc/supervisord.conf</code>启动。<br> 若是centos7：</p>
+<pre class=" language-cpp"><code class="language-cpp">systemctl start supervisord<span class="token punctuation">.</span>service     <span class="token comment" spellcheck="true">//启动supervisor并加载默认配置文件</span>
+systemctl enable supervisord<span class="token punctuation">.</span>service    <span class="token comment" spellcheck="true">//将supervisor加入开机启动项</span></code></pre>
+<h5 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h5><ol>
+<li>unix:///var/run/supervisor.sock no such file<br> 问题描述：安装好supervisor没有开启服务直接使用supervisorctl报的错<br> 解决办法：<code>supervisord -c /etc/supervisord.conf</code></li>
+<li>command中指定的进程已经起来，但supervisor还不断重启<br> 问题描述：command中启动方式为后台启动，导致识别不到pid，然后不断重启，这里使用的是elasticsearch，command指定的是<code>$path/bin/elasticsearch -d</code><br> 解决办法：supervisor无法检测后台启动进程的pid，而supervisor本身就是后台启动守护进程，因此不用担心这个</li>
+<li>启动了多个supervisord服务，导致无法正常关闭服务<br> 问题描述：在运行<code>supervisord -c /etc/supervisord.conf</code>之前，直接运行过<code>supervisord -c /etc/supervisord.d/xx.conf</code>导致有些进程被多个superviord管理，无法正常关闭进程。<br> 解决办法：使用<code>ps -fe | grep supervisord</code>查看所有启动过的supervisord服务，kill相关的进程。</li>
+</ol>
+<h5 id="更多信息请移步Supervisor官网：http-supervisord-org"><a href="#更多信息请移步Supervisor官网：http-supervisord-org" class="headerlink" title="更多信息请移步Supervisor官网：http://supervisord.org"></a>更多信息请移步Supervisor官网：<a href="https://links.jianshu.com/go?to=http%3A%2F%2Fsupervisord.org" target="_blank" rel="noopener">http://supervisord.org</a></h5>
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.zhangshan.xyz" rel="external nofollow noreferrer">lstink</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://blog.zhangshan.xyz/2020/12/29/supervisor-shi-yong-xiang-jie/">https://blog.zhangshan.xyz/2020/12/29/supervisor-shi-yong-xiang-jie/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://blog.zhangshan.xyz" target="_blank">lstink</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/linux/">
+                                    <span class="chip bg-color">linux</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.jpg" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/libs/valine/av-min.js"></script>
+<script src="/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: '045fI4gG4wex9OTYw703D5Fp-gzGzoHsz',
+        appKey: 'MsR9j3W6Euk4tUEl7Y9NTBwE',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'just go go'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2020/12/29/mac-qie-huan-node-ban-ben-de-gong-ju/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="Mac 切换node版本的工具">
+                        
+                        <span class="card-title">Mac 切换node版本的工具</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            MAC 切换node版本的方法
+这里我所知道的有两种方法：
+
+1.使用nvm
+nvm 的选择
+
+我们的选择是nvm，不过目前来说，nvm也存在着很多版本，有nvm，nvm-global，nvm-window，还有brew下的nvm。苏南大叔
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Mac/" class="post-category">
+                                    Mac
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Mac/">
+                        <span class="chip bg-color">Mac</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2020/08/09/centos-an-zhuang-mqtt/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="centos安装mqtt">
+                        
+                        <span class="card-title">centos安装mqtt</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Centos 7 安装MQTT服务和php扩展安装MosquittoCentOS 7 默认没有mosquitto包。要安装它，首先我们将安装一个额外的软件软件包，即 EPEL的额外软件存储库。该存储库中充满了可在CentOS，Red Hat
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-09
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/mqtt/" class="post-category">
+                                    mqtt
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/mqtt/">
+                        <span class="chip bg-color">mqtt</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+    <div class="container row center-align" style="margin-bottom: 0px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://blog.zhangshan.xyz" target="_blank">Lstink</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">23.7k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Lstink" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1318385889@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1318385889" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1318385889" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?46c241b68612fa4342cdc95d5448203b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i["DaoVoiceObject"] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            a.charset = "utf-8";
+            m.parentNode.insertBefore(a, m)
+        })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+            "//widget.daovoice.io/widget/6984b559.js", "daovoice")
+        daovoice('init', {
+            app_id: "2b3c85e9"
+        });
+        daovoice('update');
+    </script>
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Lstink</title>
+  
+  <subtitle>学习记录</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://blog.zhangshan.xyz/"/>
+  <updated>2021-06-28T00:57:14.287Z</updated>
+  <id>https://blog.zhangshan.xyz/</id>
+  
+  <author>
+    <name>Lstink</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>面试复习</title>
+    <link href="https://blog.zhangshan.xyz/2021/06/28/mian-shi-ti/"/>
+    <id>https://blog.zhangshan.xyz/2021/06/28/mian-shi-ti/</id>
+    <published>2021-06-28T00:57:14.287Z</published>
+    <updated>2021-06-28T00:57:14.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;git-使用&quot;&gt;&lt;a href=&quot;#git-使用&quot; class=&quot;headerlink&quot; title=&quot;git 使用&quot;&gt;&lt;/a&gt;git 使用&lt;/h2&gt;&lt;h3 id=&quot;初始化git-进入项目所在文件夹&quot;&gt;&lt;a href=&quot;#初始化git-进入项目所在文件夹&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="php" scheme="https://blog.zhangshan.xyz/categories/php/"/>
+    
+      <category term="面试题" scheme="https://blog.zhangshan.xyz/categories/php/%E9%9D%A2%E8%AF%95%E9%A2%98/"/>
+    
+    
+      <category term="php" scheme="https://blog.zhangshan.xyz/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mysql储存过程和函数</title>
+    <link href="https://blog.zhangshan.xyz/2021/04/01/mysql-chu-cun-guo-cheng-he-han-shu/"/>
+    <id>https://blog.zhangshan.xyz/2021/04/01/mysql-chu-cun-guo-cheng-he-han-shu/</id>
+    <published>2021-04-01T07:10:22.000Z</published>
+    <updated>2021-06-28T00:57:14.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Mysql存储过程和函数学习&quot;&gt;&lt;a href=&quot;#Mysql存储过程和函数学习&quot; class=&quot;headerlink&quot; title=&quot;Mysql存储过程和函数学习&quot;&gt;&lt;/a&gt;Mysql存储过程和函数学习&lt;/h1&gt;&lt;h2 id=&quot;一-定义名称&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>centos安装svn服务</title>
+    <link href="https://blog.zhangshan.xyz/2021/03/31/centos-an-zhuang-svn-fu-wu/"/>
+    <id>https://blog.zhangshan.xyz/2021/03/31/centos-an-zhuang-svn-fu-wu/</id>
+    <published>2021-03-31T03:39:22.000Z</published>
+    <updated>2021-06-28T00:57:14.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;centos安装svn服务并配置&quot;&gt;&lt;a href=&quot;#centos安装svn服务并配置&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="svn" scheme="https://blog.zhangshan.xyz/categories/svn/"/>
+    
+    
+      <category term="svn" scheme="https://blog.zhangshan.xyz/tags/svn/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="https://blog.zhangshan.xyz/2021/03/26/zheng-ze-biao-da-shi/"/>
+    <id>https://blog.zhangshan.xyz/2021/03/26/zheng-ze-biao-da-shi/</id>
+    <published>2021-03-26T02:53:18.000Z</published>
+    <updated>2021-06-28T00:57:14.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;正则表达式-断言&quot;&gt;&lt;a href=&quot;#正则表达式-断言&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="regex" scheme="https://blog.zhangshan.xyz/categories/regex/"/>
+    
+    
+      <category term="regex" scheme="https://blog.zhangshan.xyz/tags/regex/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mac 切换node版本的工具</title>
+    <link href="https://blog.zhangshan.xyz/2020/12/29/mac-qie-huan-node-ban-ben-de-gong-ju/"/>
+    <id>https://blog.zhangshan.xyz/2020/12/29/mac-qie-huan-node-ban-ben-de-gong-ju/</id>
+    <published>2020-12-29T03:06:52.000Z</published>
+    <updated>2021-06-28T00:57:14.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;MAC-切换node版本的方法&quot;&gt;&lt;a href=&quot;#MAC-切换node版本的方法&quot; class=&quot;headerlink&quot; title=&quot;MAC 切换node版本的方法&quot;&gt;&lt;/a&gt;MAC
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Mac" scheme="https://blog.zhangshan.xyz/categories/Mac/"/>
+    
+    
+      <category term="Mac" scheme="https://blog.zhangshan.xyz/tags/Mac/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Supervisor使用详解</title>
+    <link href="https://blog.zhangshan.xyz/2020/12/29/supervisor-shi-yong-xiang-jie/"/>
+    <id>https://blog.zhangshan.xyz/2020/12/29/supervisor-shi-yong-xiang-jie/</id>
+    <published>2020-12-29T02:59:15.000Z</published>
+    <updated>2021-06-28T00:57:14.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;一、supervisor简介&quot;&gt;&lt;a href=&quot;#一、supervisor简介&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://blog.zhangshan.xyz/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="https://blog.zhangshan.xyz/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>centos安装mqtt</title>
+    <link href="https://blog.zhangshan.xyz/2020/08/09/centos-an-zhuang-mqtt/"/>
+    <id>https://blog.zhangshan.xyz/2020/08/09/centos-an-zhuang-mqtt/</id>
+    <published>2020-08-09T14:10:47.000Z</published>
+    <updated>2021-06-28T00:57:14.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Centos-7-安装MQTT服务和php扩展&quot;&gt;&lt;a href=&quot;#Centos-7-安装MQTT服务和php扩展&quot; class=&quot;headerlink&quot; title=&quot;Centos 7 安装MQTT服务和php扩展&quot;&gt;&lt;/a&gt;Centos 7
+        
+      
+    
+    </summary>
+    
+    
+      <category term="mqtt" scheme="https://blog.zhangshan.xyz/categories/mqtt/"/>
+    
+    
+      <category term="mqtt" scheme="https://blog.zhangshan.xyz/tags/mqtt/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>黑苹果命令行制作原版镜像</title>
+    <link href="https://blog.zhangshan.xyz/2020/08/09/hei-ping-guo-ming-ling-xing-zhi-zuo-yuan-ban-jing-xiang/"/>
+    <id>https://blog.zhangshan.xyz/2020/08/09/hei-ping-guo-ming-ling-xing-zhi-zuo-yuan-ban-jing-xiang/</id>
+    <published>2020-08-09T02:51:45.000Z</published>
+    <updated>2021-06-28T00:57:14.289Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;黑苹果制作原版镜像的方式&quot;&gt;&lt;a href=&quot;#黑苹果制作原版镜像的方式&quot; class=&quot;headerlink&quot; title=&quot;黑苹果制作原版镜像的方式&quot;&gt;&lt;/a&gt;黑苹果制作原版镜像的方式&lt;/h1&gt;&lt;h2 id=&quot;准备工具&quot;&gt;&lt;a href=&quot;#准备工具&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="黑苹果" scheme="https://blog.zhangshan.xyz/categories/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    
+    
+      <category term="黑苹果" scheme="https://blog.zhangshan.xyz/tags/%E9%BB%91%E8%8B%B9%E6%9E%9C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laravel event(事件)的使用方法</title>
+    <link href="https://blog.zhangshan.xyz/2020/08/04/laravel-event-shi-jian-de-shi-yong-fang-fa/"/>
+    <id>https://blog.zhangshan.xyz/2020/08/04/laravel-event-shi-jian-de-shi-yong-fang-fa/</id>
+    <published>2020-08-04T02:52:14.000Z</published>
+    <updated>2021-06-28T00:57:14.226Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Laravel-event-事件处理&quot;&gt;&lt;a href=&quot;#Laravel-event-事件处理&quot; class=&quot;headerlink&quot; title=&quot;Laravel event 事件处理&quot;&gt;&lt;/a&gt;Laravel event 事件处理&lt;/h1&gt;&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/categories/laravel/"/>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/tags/laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>记录一次模型的关联操作</title>
+    <link href="https://blog.zhangshan.xyz/2020/07/24/ji-lu-yi-ci-mo-xing-de-guan-lian-cao-zuo/"/>
+    <id>https://blog.zhangshan.xyz/2020/07/24/ji-lu-yi-ci-mo-xing-de-guan-lian-cao-zuo/</id>
+    <published>2020-07-24T10:04:55.000Z</published>
+    <updated>2021-06-28T00:57:14.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;记录一次模型关联操作&quot;&gt;&lt;a href=&quot;#记录一次模型关联操作&quot; class=&quot;headerlink&quot; title=&quot;记录一次模型关联操作&quot;&gt;&lt;/a&gt;记录一次模型关联操作&lt;/h1&gt;&lt;h2 id=&quot;一对多查询&quot;&gt;&lt;a href=&quot;#一对多查询&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="thinkphp" scheme="https://blog.zhangshan.xyz/categories/thinkphp/"/>
+    
+    
+      <category term="模型关联" scheme="https://blog.zhangshan.xyz/tags/%E6%A8%A1%E5%9E%8B%E5%85%B3%E8%81%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux-学习记录</title>
+    <link href="https://blog.zhangshan.xyz/2020/07/18/linux-xue-xi-ji-lu/"/>
+    <id>https://blog.zhangshan.xyz/2020/07/18/linux-xue-xi-ji-lu/</id>
+    <published>2020-07-18T13:35:12.000Z</published>
+    <updated>2021-06-28T00:57:14.232Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Liunx-（centos8）-学习记录&quot;&gt;&lt;a href=&quot;#Liunx-（centos8）-学习记录&quot; class=&quot;headerlink&quot; title=&quot;Liunx （centos8） 学习记录&quot;&gt;&lt;/a&gt;Liunx （centos8）
+        
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="https://blog.zhangshan.xyz/categories/linux/"/>
+    
+    
+      <category term="linux" scheme="https://blog.zhangshan.xyz/tags/linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows下配置环境变量的意义和方法</title>
+    <link href="https://blog.zhangshan.xyz/2020/07/09/windows-xia-pei-zhi-huan-jing-bian-liang-de-yi-yi-he-fang-fa/"/>
+    <id>https://blog.zhangshan.xyz/2020/07/09/windows-xia-pei-zhi-huan-jing-bian-liang-de-yi-yi-he-fang-fa/</id>
+    <published>2020-07-09T05:11:24.000Z</published>
+    <updated>2021-06-28T00:57:14.248Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;windows-10-配置环境变量的方法&quot;&gt;&lt;a href=&quot;#windows-10-配置环境变量的方法&quot; class=&quot;headerlink&quot; title=&quot;windows 10 配置环境变量的方法&quot;&gt;&lt;/a&gt;windows 10
+        
+      
+    
+    </summary>
+    
+    
+      <category term="windows" scheme="https://blog.zhangshan.xyz/categories/windows/"/>
+    
+    
+      <category term="windows" scheme="https://blog.zhangshan.xyz/tags/windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付库的使用</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/22/zhi-fu-ku-de-shi-yong/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/22/zhi-fu-ku-de-shi-yong/</id>
+    <published>2020-05-22T09:02:46.000Z</published>
+    <updated>2021-06-28T00:57:14.286Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;支付&quot;&gt;&lt;a href=&quot;#支付&quot; class=&quot;headerlink&quot; title=&quot;支付&quot;&gt;&lt;/a&gt;支付&lt;/h1&gt;&lt;h3 id=&quot;1-引入支付库-yansonda-pay&quot;&gt;&lt;a href=&quot;#1-引入支付库-yansonda-pay&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="php" scheme="https://blog.zhangshan.xyz/categories/php/"/>
+    
+    
+      <category term="php" scheme="https://blog.zhangshan.xyz/tags/php/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>laravel创建延时任务</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/22/laravel-chuang-jian-yan-shi-ren-wu/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/22/laravel-chuang-jian-yan-shi-ren-wu/</id>
+    <published>2020-05-22T08:05:22.000Z</published>
+    <updated>2021-06-28T00:57:14.226Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Laravel创建延时任务&quot;&gt;&lt;a href=&quot;#Laravel创建延时任务&quot; class=&quot;headerlink&quot; title=&quot;Laravel创建延时任务&quot;&gt;&lt;/a&gt;Laravel创建延时任务&lt;/h1&gt;&lt;h3 id=&quot;1-创建任务&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/categories/laravel/"/>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/tags/laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>photoshop修改照片为指定尺寸和像素</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/21/photoshop-xiu-gai-zhao-pian-wei-zhi-ding-chi-cun-he-xiang-su/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/21/photoshop-xiu-gai-zhao-pian-wei-zhi-ding-chi-cun-he-xiang-su/</id>
+    <published>2020-05-21T03:41:57.000Z</published>
+    <updated>2021-06-28T00:57:14.235Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;PhotoShop修改图片为指定像素或者尺寸&quot;&gt;&lt;a href=&quot;#PhotoShop修改图片为指定像素或者尺寸&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="Photoshop" scheme="https://blog.zhangshan.xyz/categories/Photoshop/"/>
+    
+    
+      <category term="Photoshop" scheme="https://blog.zhangshan.xyz/tags/Photoshop/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>windows系统搭建nginx/Apache+php+mysql以及工具的安装</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/20/windows-xi-tong-da-jian-nginx-apache-php-mysql-yi-ji-gong-ju-de-an-zhuang/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/20/windows-xi-tong-da-jian-nginx-apache-php-mysql-yi-ji-gong-ju-de-an-zhuang/</id>
+    <published>2020-05-20T08:29:56.000Z</published>
+    <updated>2021-06-28T00:57:14.251Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;windows系统搭建nginx-Apache-php-mysql以及工具的安装&quot;&gt;&lt;a href=&quot;#windows系统搭建nginx-Apache-php-mysql以及工具的安装&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="windows10" scheme="https://blog.zhangshan.xyz/categories/windows10/"/>
+    
+      <category term="phpstudy" scheme="https://blog.zhangshan.xyz/categories/windows10/phpstudy/"/>
+    
+    
+      <category term="phpstudy" scheme="https://blog.zhangshan.xyz/tags/phpstudy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Mysql8.0使用laravel框架报错问题</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/18/mysql8-0-shi-yong-laravel-kuang-jia-bao-cuo-wen-ti/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/18/mysql8-0-shi-yong-laravel-kuang-jia-bao-cuo-wen-ti/</id>
+    <published>2020-05-18T11:13:11.000Z</published>
+    <updated>2021-06-28T00:57:14.234Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;使用laravel-mysql8-0-报错&quot;&gt;&lt;a href=&quot;#使用laravel-mysql8-0-报错&quot; class=&quot;headerlink&quot; title=&quot;使用laravel + mysql8.0 报错&quot;&gt;&lt;/a&gt;使用laravel + mysql8.0
+        
+      
+    
+    </summary>
+    
+    
+      <category term="mysql" scheme="https://blog.zhangshan.xyz/categories/mysql/"/>
+    
+    
+      <category term="mysql8.0" scheme="https://blog.zhangshan.xyz/tags/mysql8-0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>生成ssh key</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/17/sheng-cheng-ssh-key/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/17/sheng-cheng-ssh-key/</id>
+    <published>2020-05-17T12:38:33.000Z</published>
+    <updated>2021-06-28T00:57:14.287Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;生成ssh-key&quot;&gt;&lt;a href=&quot;#生成ssh-key&quot; class=&quot;headerlink&quot; title=&quot;生成ssh key&quot;&gt;&lt;/a&gt;生成ssh key&lt;/h1&gt;&lt;h3 id=&quot;打开命令行&quot;&gt;&lt;a href=&quot;#打开命令行&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="ssh" scheme="https://blog.zhangshan.xyz/categories/ssh/"/>
+    
+    
+      <category term="ssh" scheme="https://blog.zhangshan.xyz/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laravel的异常处理机制</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/17/laravel-de-yi-chang-chu-li-ji-zhi/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/17/laravel-de-yi-chang-chu-li-ji-zhi/</id>
+    <published>2020-05-17T07:35:46.000Z</published>
+    <updated>2021-06-28T00:57:14.227Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Laravel的异常处理&quot;&gt;&lt;a href=&quot;#Laravel的异常处理&quot; class=&quot;headerlink&quot; title=&quot;Laravel的异常处理&quot;&gt;&lt;/a&gt;Laravel的异常处理&lt;/h1&gt;&lt;h3 id=&quot;异常&quot;&gt;&lt;a href=&quot;#异常&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/categories/laravel/"/>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/tags/laravel/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Laravel错误提示替换为中文</title>
+    <link href="https://blog.zhangshan.xyz/2020/05/16/laravel-cuo-wu-ti-shi-ti-huan-wei-zhong-wen/"/>
+    <id>https://blog.zhangshan.xyz/2020/05/16/laravel-cuo-wu-ti-shi-ti-huan-wei-zhong-wen/</id>
+    <published>2020-05-16T13:12:53.000Z</published>
+    <updated>2021-06-28T00:57:14.231Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Laravel表单验证提示替换为中文&quot;&gt;&lt;a href=&quot;#Laravel表单验证提示替换为中文&quot; class=&quot;headerlink&quot; title=&quot;Laravel表单验证提示替换为中文&quot;&gt;&lt;/a&gt;Laravel表单验证提示替换为中文&lt;/h1&gt;&lt;h3
+        
+      
+    
+    </summary>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/categories/laravel/"/>
+    
+    
+      <category term="laravel" scheme="https://blog.zhangshan.xyz/tags/laravel/"/>
+    
+  </entry>
+  
+</feed>
