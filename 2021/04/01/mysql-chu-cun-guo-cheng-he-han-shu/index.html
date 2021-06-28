@@ -40,8 +40,8 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 4.2.1"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><link rel="alternate" href="/atom.xml" title="Lstink" type="application/atom+xml">
-</head>
+<meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Lstink" type="application/atom+xml">
+<link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 <body>
@@ -385,12 +385,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/mysql/">
+                                <span class="chip bg-color">mysql</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/mysql/" class="post-category">
+                                mysql
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -413,7 +426,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    140
+                    150
                 </div>
                 
 
@@ -430,7 +443,8 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="Mysql存储过程和函数学习"><a href="#Mysql存储过程和函数学习" class="headerlink" title="Mysql存储过程和函数学习"></a>Mysql存储过程和函数学习</h1><h2 id="一-定义名称"><a href="#一-定义名称" class="headerlink" title="一. 定义名称"></a>一. 定义名称</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 创建存储过程--接受一个整型的输入值</span>
+                <h1 id="Mysql存储过程和函数学习"><a href="#Mysql存储过程和函数学习" class="headerlink" title="Mysql存储过程和函数学习"></a>Mysql存储过程和函数学习</h1><p>简单记录，以备不时之需。</p>
+<h2 id="一-定义名称"><a href="#一-定义名称" class="headerlink" title="一. 定义名称"></a>一. 定义名称</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 创建存储过程--接受一个整型的输入值</span>
 create procedure name<span class="token punctuation">(</span>in param int<span class="token punctuation">)</span>
 <span class="token comment" spellcheck="true"># 创建函数</span>
 create <span class="token keyword">function</span> name</code></pre>
@@ -440,17 +454,20 @@ create <span class="token keyword">function</span> name</code></pre>
 <p><code>out</code> 输出</p>
 <p><code>inout</code> 输入输出</p>
 </blockquote>
-<h2 id="三-声明结束符的定义"><a href="#三-声明结束符的定义" class="headerlink" title="三. 声明结束符的定义"></a>三. 声明结束符的定义</h2><pre class=" language-bash"><code class="language-bash">delimitetr $$
+<h2 id="三-声明结束符的定义"><a href="#三-声明结束符的定义" class="headerlink" title="三. 声明结束符的定义"></a>三. 声明结束符的定义</h2><pre class=" language-mysql"><code class="language-mysql">delimitetr $$
 或
 delimiter //</code></pre>
 <h2 id="四-变量的定义"><a href="#四-变量的定义" class="headerlink" title="四. 变量的定义"></a>四. 变量的定义</h2><p><code>declare</code> 开头，后面是变量名称，然后跟类型约束 </p>
-<pre><code>declare name int unsigned default 100;</code></pre><h2 id="五-示例"><a href="#五-示例" class="headerlink" title="五. 示例"></a>五. 示例</h2><pre><code># 创建存储过程
+<pre class=" language-mysql"><code class="language-mysql">declare name int unsigned default 100;</code></pre>
+<h2 id="五-示例"><a href="#五-示例" class="headerlink" title="五. 示例"></a>五. 示例</h2><pre class=" language-mysql"><code class="language-mysql"># 创建存储过程
 CREATE PROCEDURE test(IN a INT)
 # 开始使用 BEGIN
 BEGIN
     SELECT * FROM USER;
 # 结束使用 END
-END</code></pre><h2 id="六-调用"><a href="#六-调用" class="headerlink" title="六. 调用"></a>六. 调用</h2><pre><code>call test(1)</code></pre>
+END</code></pre>
+<h2 id="六-调用"><a href="#六-调用" class="headerlink" title="六. 调用"></a>六. 调用</h2><pre class=" language-mysql"><code class="language-mysql">call test(1)</code></pre>
+
             </div>
             <hr/>
 
@@ -512,7 +529,11 @@ END</code></pre><h2 id="六-调用"><a href="#六-调用" class="headerlink" tit
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/mysql/">
+                                    <span class="chip bg-color">mysql</span>
+                                </a>
+                            
                         </div>
                     
                 </div>

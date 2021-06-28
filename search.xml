@@ -35,9 +35,21 @@
       <link href="/2021/04/01/mysql-chu-cun-guo-cheng-he-han-shu/"/>
       <url>/2021/04/01/mysql-chu-cun-guo-cheng-he-han-shu/</url>
       
-        <content type="html"><![CDATA[<h1 id="Mysql存储过程和函数学习"><a href="#Mysql存储过程和函数学习" class="headerlink" title="Mysql存储过程和函数学习"></a>Mysql存储过程和函数学习</h1><h2 id="一-定义名称"><a href="#一-定义名称" class="headerlink" title="一. 定义名称"></a>一. 定义名称</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 创建存储过程--接受一个整型的输入值</span>create procedure name<span class="token punctuation">(</span>in param int<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 创建函数</span>create <span class="token keyword">function</span> name</code></pre><h2 id="二-输入输出"><a href="#二-输入输出" class="headerlink" title="二. 输入输出"></a>二. 输入输出</h2><p><code>IN</code> , <code>OUT</code> , <code>INOUTT</code></p><blockquote><p><code>in</code> 输入</p><p><code>out</code> 输出</p><p><code>inout</code> 输入输出</p></blockquote><h2 id="三-声明结束符的定义"><a href="#三-声明结束符的定义" class="headerlink" title="三. 声明结束符的定义"></a>三. 声明结束符的定义</h2><pre class=" language-bash"><code class="language-bash">delimitetr $$或delimiter //</code></pre><h2 id="四-变量的定义"><a href="#四-变量的定义" class="headerlink" title="四. 变量的定义"></a>四. 变量的定义</h2><p><code>declare</code> 开头，后面是变量名称，然后跟类型约束 </p><pre><code>declare name int unsigned default 100;</code></pre><h2 id="五-示例"><a href="#五-示例" class="headerlink" title="五. 示例"></a>五. 示例</h2><pre><code># 创建存储过程CREATE PROCEDURE test(IN a INT)# 开始使用 BEGINBEGIN    SELECT * FROM USER;# 结束使用 ENDEND</code></pre><h2 id="六-调用"><a href="#六-调用" class="headerlink" title="六. 调用"></a>六. 调用</h2><pre><code>call test(1)</code></pre>]]></content>
+        <content type="html"><![CDATA[<h1 id="Mysql存储过程和函数学习"><a href="#Mysql存储过程和函数学习" class="headerlink" title="Mysql存储过程和函数学习"></a>Mysql存储过程和函数学习</h1><p>简单记录，以备不时之需。</p><h2 id="一-定义名称"><a href="#一-定义名称" class="headerlink" title="一. 定义名称"></a>一. 定义名称</h2><pre class=" language-bash"><code class="language-bash"><span class="token comment" spellcheck="true"># 创建存储过程--接受一个整型的输入值</span>create procedure name<span class="token punctuation">(</span>in param int<span class="token punctuation">)</span><span class="token comment" spellcheck="true"># 创建函数</span>create <span class="token keyword">function</span> name</code></pre><h2 id="二-输入输出"><a href="#二-输入输出" class="headerlink" title="二. 输入输出"></a>二. 输入输出</h2><p><code>IN</code> , <code>OUT</code> , <code>INOUTT</code></p><blockquote><p><code>in</code> 输入</p><p><code>out</code> 输出</p><p><code>inout</code> 输入输出</p></blockquote><h2 id="三-声明结束符的定义"><a href="#三-声明结束符的定义" class="headerlink" title="三. 声明结束符的定义"></a>三. 声明结束符的定义</h2><pre class=" language-mysql"><code class="language-mysql">delimitetr $$或delimiter //</code></pre><h2 id="四-变量的定义"><a href="#四-变量的定义" class="headerlink" title="四. 变量的定义"></a>四. 变量的定义</h2><p><code>declare</code> 开头，后面是变量名称，然后跟类型约束 </p><pre class=" language-mysql"><code class="language-mysql">declare name int unsigned default 100;</code></pre><h2 id="五-示例"><a href="#五-示例" class="headerlink" title="五. 示例"></a>五. 示例</h2><pre class=" language-mysql"><code class="language-mysql"># 创建存储过程CREATE PROCEDURE test(IN a INT)# 开始使用 BEGINBEGIN    SELECT * FROM USER;# 结束使用 ENDEND</code></pre><h2 id="六-调用"><a href="#六-调用" class="headerlink" title="六. 调用"></a>六. 调用</h2><pre class=" language-mysql"><code class="language-mysql">call test(1)</code></pre>]]></content>
       
       
+      <categories>
+          
+          <category> mysql </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> mysql </tag>
+            
+        </tags>
       
     </entry>
     
